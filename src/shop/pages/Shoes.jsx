@@ -1,0 +1,17 @@
+import React from "react";
+import { ProductCard } from "../components/ProductCard";
+import { useFetch } from "../hooks/useFetch";
+
+export const Shoes = () => {
+
+  // const productos = getProducts('shoes');
+  const { productos, isLoading, query, setQuery, getRequest } = useFetch("shoes");
+
+  return (
+    <div style={{ display: "flex", flexWrap: 'wrap', gap: "1rem", padding: "2rem" }}>
+      {productos.map((p, i) => (
+        <ProductCard key={i} {...p} />
+      ))}
+    </div>
+  );
+};

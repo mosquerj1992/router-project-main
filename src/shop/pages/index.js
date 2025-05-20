@@ -1,0 +1,5 @@
+export { Home } from './Home'
+export { About } from './About'
+export { Accesories } from './Accesories'
+export { Clothes } from './Clothes'
+export { Shoes } from './Shoes'
